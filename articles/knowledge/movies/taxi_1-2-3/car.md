@@ -1,9 +1,9 @@
-## Автомобиль из фильма Такси - Peugeot 406
+﻿## Автомобиль из фильма Такси - Peugeot 406
 11-05-2022 08:10
 
 Wikipedia https://ru.wikipedia.org/wiki/Peugeot_406
 
-![Taxi](../../../../resources/images/car_peugeot-406_taxi.jpg)
+![Taxi](./car_peugeot-406_taxi.jpg)
 
 Peugeot 406 — автомобиль D-сегмента, выпускавшийся под маркой Peugeot в кузовах седан, универсал и купе.
 
