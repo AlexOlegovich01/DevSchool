@@ -5,10 +5,10 @@
 
 #### Программы  
 - VS Code  
-[Горячие клавиши](articles/knowledge/software/vs_code/hotkeys.md)
+[Горячие клавиши](articles/software/vs_code/hotkeys.md)
 
 #### Фильмы  
 - Такси  
-[Актёры из фильма](articles/knowledge/movies/taxi_1-2-3/actors.md)  
-[Автомобиль из фильма](articles/knowledge/movies/taxi_1-2-3/car.md)
+[Актёры из фильма](articles/movies/taxi_1-2-3/actors.md)  
+[Автомобиль из фильма](articles/movies/taxi_1-2-3/car.md)
 
