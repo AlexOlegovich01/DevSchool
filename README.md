@@ -9,8 +9,8 @@
 
 #### Python
 - Парсинг  
-[Основы Selenium](#)  
-[Имитация юзера в Selenium](#)  
+[Введение в Selenium](articles/coding/python/selenium_ls1/lesson1.md)  
+[Исследуем сайт для парсинга](#)  
 [Полезные настройки](#)
 
 
