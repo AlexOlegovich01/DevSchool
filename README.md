@@ -9,9 +9,11 @@
 
 #### Python
 - Парсинг  
-[Введение в Selenium](articles/coding/python/selenium_ls1/lesson1.md)  
-[Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium_ls2/lesson2.md)  
-[Полезные настройки](#)
+  - [:package: Введение в Selenium](articles/coding/python/selenium_ls1/lesson1.md)  
+  - [:package: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium_ls2/lesson2.md)  
+  - [:package: Полезные настройки. Работа вебдрайвера](#)
+  - [:package: Полезные настройки. Безопасность](#)
+  - [:package: Полезные настройки. Файл конфигурации](#)
 
 
 #### Фильмы  
