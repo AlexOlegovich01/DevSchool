@@ -32,4 +32,4 @@ permissions.default.image 1 #отключить изображения
 javascript.enabled=False #отключает js
 ```
 
-[:rewind:**Вернуться назад**](../../../../README.md)
+[:rewind:**Вернуться назад**](../../../../../README.md)

@@ -28,4 +28,4 @@ for cookie in pickle.load(open('название файла куки без ра
 driver.refresh() #Обновляем страницу
 ```
 
-[:rewind:**Вернуться назад**](../../../../README.md)
+[:rewind:**Вернуться назад**](../../../../../README.md)
