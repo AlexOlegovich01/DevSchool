@@ -20,7 +20,7 @@ finally:
 	driver.quit()
 ```
 
-Разберем некоторые опции. Список будет пополняться.
+Опции...
 
 ```python
 options.set_preference("dom.webdriver.enabled",False) #отключает режим вебдрайвера
