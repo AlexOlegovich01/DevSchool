@@ -13,8 +13,8 @@
   - [:arrow_forward: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium/search_elements_and_site_types/article.md)  
   - [:arrow_forward: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
   - [:arrow_forward: Полезные настройки. Работа вебдрайвера](articles/coding/python/selenium/settings/article.md)
-  - [:arrow_forward: Полезные настройки. Файл конфигурации](#)
   - [:arrow_forward: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
+  - [:arrow_forward: Приемы работы в Selenium](articles/coding/python/selenium/examples_code/article.md)
 
 
 #### Фильмы  
