@@ -14,7 +14,7 @@
   - [:arrow_forward: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
   - [:arrow_forward: Полезные настройки. Работа вебдрайвера](articles/coding/python/selenium/settings/article.md)
   - [:arrow_forward: Полезные настройки. Файл конфигурации](#)
-  - [:arrow_forward: fake user-agent и headless detector](#)
+  - [:arrow_forward: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
 
 
 #### Фильмы  
