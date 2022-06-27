@@ -16,7 +16,7 @@
   - [:arrow_forward: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
   - [:arrow_forward: Приемы работы в Selenium](articles/coding/python/selenium/examples_code/article.md)
   - [:arrow_forward: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
-  - [:arrow_forward: Правила безопасного парсинга](#)
+  - [:arrow_forward: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
 
 
 #### Фильмы  
