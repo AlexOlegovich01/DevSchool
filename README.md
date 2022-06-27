@@ -7,8 +7,8 @@
 - VS Code  
 [Горячие клавиши](articles/software/vs_code/hotkeys.md)
 
-#### Python
-- Парсинг  
+#### Программирование
+- Python Парсинг  
   - [:arrow_forward: Введение в Selenium](articles/coding/python/selenium/introduction/article.md)  
   - [:arrow_forward: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium/search_elements_and_site_types/article.md)  
   - [:arrow_forward: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
