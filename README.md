@@ -18,6 +18,17 @@
   - [:arrow_forward: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
   - [:arrow_forward: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
 
+#### 3D моделирование
+- **Базовый Blender**
+  - :doughnut: Режим редактирования
+  - :doughnut: Скульптинг
+  - :doughnut: Материалы
+  - :doughnut: UV-развертка
+  - :doughnut: Постобработка
+  - :doughnut: Анимация
+- **Нетипичный Blender**
+  - :doughnut: Морфинг
+  - :doughnut: Создание облаков
 
 #### Фильмы  
 - Такси  
