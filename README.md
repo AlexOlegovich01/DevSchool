@@ -21,7 +21,7 @@
 #### 3D моделирование
 - **Базовый Blender**
   - [:doughnut: Режим редактирования](articles/modelling/base_blender/editmode/article.md)
-  - :doughnut: Скульптинг
+  - [:doughnut: Скульптинг](articles/modelling/base_blender/sculptmode/article.md)
   - :doughnut: Материалы
   - :doughnut: UV-развертка
   - :doughnut: Постобработка
