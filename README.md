@@ -9,14 +9,14 @@
 
 #### Программирование
 - Python Парсинг  
-  - [:arrow_forward: Введение в Selenium](articles/coding/python/selenium/introduction/article.md)  
-  - [:arrow_forward: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium/search_elements_and_site_types/article.md)  
-  - [:arrow_forward: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
-  - [:arrow_forward: Полезные настройки. Работа вебдрайвера](articles/coding/python/selenium/settings/article.md)
-  - [:arrow_forward: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
-  - [:arrow_forward: Приемы работы в Selenium](articles/coding/python/selenium/examples_code/article.md)
-  - [:arrow_forward: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
-  - [:arrow_forward: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
+  - [:heavy_check_mark: Введение в Selenium](articles/coding/python/selenium/introduction/article.md)  
+  - [:heavy_check_mark: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium/search_elements_and_site_types/article.md)  
+  - [:heavy_check_mark: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
+  - [:heavy_check_mark: Полезные настройки. Работа вебдрайвера](articles/coding/python/selenium/settings/article.md)
+  - [:heavy_check_mark: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
+  - [:heavy_check_mark: Приемы работы в Selenium](articles/coding/python/selenium/examples_code/article.md)
+  - [:heavy_check_mark: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
+  - [:heavy_check_mark: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
 
 #### 3D моделирование
 - **Базовый Blender**
