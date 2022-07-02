@@ -23,7 +23,7 @@
   - [:doughnut: Режим редактирования](articles/modelling/base_blender/editmode/article.md)
   - [:doughnut: Скульптинг](articles/modelling/base_blender/sculptmode/article.md)
   - [:doughnut: Материалы](articles/modelling/base_blender/materials/article.md)
-  - :doughnut: UV-развертка
+  - [:doughnut: UV-развертка](articles/modelling/base_blender/uv/article.md)
   - :doughnut: Постобработка
   - :doughnut: Анимация
 - **Нетипичный Blender**
