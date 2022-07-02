@@ -27,7 +27,7 @@
   - :doughnut: Постобработка
   - :doughnut: Анимация
 - **Нетипичный Blender**
-  - :doughnut: Морфинг
+  - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
   - :doughnut: Создание облаков
 
 #### Фильмы  
