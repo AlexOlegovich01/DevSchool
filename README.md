@@ -24,7 +24,7 @@
   - [:doughnut: Скульптинг](articles/modelling/base_blender/sculptmode/article.md)
   - [:doughnut: Материалы](articles/modelling/base_blender/materials/article.md)
   - [:doughnut: UV-развертка](articles/modelling/base_blender/uv/article.md)
-  - :doughnut: Постобработка
+  - [:doughnut: Geometry Nodes](articles/modelling/base_blender/geometry_nodes/article.md)
   - :doughnut: Анимация
 - **Нетипичный Blender**
   - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
