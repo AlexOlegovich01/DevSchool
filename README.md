@@ -25,8 +25,9 @@
   - [:doughnut: Материалы](articles/modelling/base_blender/materials/article.md)
   - [:doughnut: UV-развертка](articles/modelling/base_blender/uv/article.md)
   - [:doughnut: Работа с кривыми](articles/modelling/base_blender/curve_vorking/article.md)
-  - [:doughnut: Geometry Nodes](articles/modelling/base_blender/geometry_nodes/article.md)
   - :doughnut: Анимация
+- **Geonetry Nodes**
+  - [:earth_asia: Введение](articles/modelling/geometry_nodes/introduction/article.md)
 - **Нетипичный Blender**
   - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
   - :doughnut: Создание облаков
