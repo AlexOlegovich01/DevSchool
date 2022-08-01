@@ -28,6 +28,7 @@
   - :doughnut: Анимация
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/modelling/geometry_nodes/introduction/article.md)
+  - [:earth_asia: Работа с кривыми](articles/modelling/geometry_nodes/curves/article.md)
 - **Нетипичный Blender**
   - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
   - :doughnut: Создание облаков
