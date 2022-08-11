@@ -5,7 +5,7 @@
 
 #### Программы  
 - VS Code  
-[Горячие клавиши](articles/software/vs_code/hotkeys.md)
+[Горячие клавиши](articles/software/vs_code/hotkeys.md)  
 [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
 
 #### Программирование
