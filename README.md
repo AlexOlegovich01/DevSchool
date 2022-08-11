@@ -36,7 +36,7 @@
   - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
   - :doughnut: Создание облаков
 - **Рендеринг**
-  - :doughnut: Оптимизация Cycles
+  - [:doughnut: Оптимизация Cycles](articles/modelling/rendering/opt_cycles/article.md)
 
 #### Фильмы  
 - Такси  
