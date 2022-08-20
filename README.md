@@ -19,25 +19,22 @@
   - [:heavy_check_mark: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
   - [:heavy_check_mark: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
 
-#### 3D моделирование
-- **Базовый Blender**
-  - [:doughnut: Режим редактирования](articles/modelling/base_blender/editmode/article.md)
-  - [:doughnut: Скульптинг](articles/modelling/base_blender/sculptmode/article.md)
-  - [:doughnut: Материалы](articles/modelling/base_blender/materials/article.md)
-  - [:doughnut: UV-развертка](articles/modelling/base_blender/uv/article.md)
-  - [:doughnut: Работа с кривыми](articles/modelling/base_blender/curve_vorking/article.md)
+#### Blender
+- **Моделирование**
+  - [:doughnut: Режим редактирования](articles/blender/modelling/editmode/article.md)
+  - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode/article.md)
+  - [:doughnut: Материалы](articles/blender/modelling/materials/article.md)
+  - [:doughnut: UV-развертка](articles/blender/modelling/uv/article.md)
+  - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking/article.md)
   - :doughnut: Анимация
   - :doughnut: Compositing
   - :doughnut: Модификаторы
-  - [:doughnut: Ретопология](articles/modelling/base_blender/retopology/article.md)
+  - [:doughnut: Ретопология](articles/blender/modelling/retopology/article.md)
+  - :doughnut: Приемы работы
+  - [:doughnut: Рендеринг](articles/blender/modelling/rendering/article.md)
 - **Geonetry Nodes**
-  - [:earth_asia: Введение](articles/modelling/geometry_nodes/introduction/article.md)
-  - [:earth_asia: Работа с кривыми](articles/modelling/geometry_nodes/curves/article.md)
-- **Нетипичный Blender**
-  - [:doughnut: Морфинг](articles/modelling/make_examples/morphing/article.md)
-  - :doughnut: Создание облаков
-- **Рендеринг**
-  - [:doughnut: Оптимизация Cycles](articles/modelling/rendering/opt_cycles/article.md)
+  - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction/article.md)
+  - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves/article.md)
 
 #### Фильмы  
 - Такси  
