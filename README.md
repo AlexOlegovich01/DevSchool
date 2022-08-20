@@ -31,6 +31,7 @@
   - :doughnut: Модификаторы
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples/article.md)
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering/article.md)
+  - [:doughnut: Физика](articles/blender/modelling/physics/article.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction/article.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves/article.md)
