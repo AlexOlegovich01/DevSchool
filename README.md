@@ -29,7 +29,6 @@
   - :doughnut: Анимация
   - :doughnut: Compositing
   - :doughnut: Модификаторы
-  - [:doughnut: Ретопология](articles/blender/modelling/retopology/article.md)
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples/article.md)
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering/article.md)
 - **Geonetry Nodes**
