@@ -24,7 +24,6 @@
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode/article.md)
   - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode/article.md)
   - [:doughnut: Материалы](articles/blender/modelling/materials/article.md)
-  - [:doughnut: UV-развертка](articles/blender/modelling/uv/article.md)
   - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking/article.md)
   - :doughnut: Анимация
   - :doughnut: Compositing
