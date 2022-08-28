@@ -35,6 +35,9 @@
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction/article.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves/article.md)
 
+#### Unity
+- [:video_game: Физика](articles/unity/physics/article.md)
+
 #### Фильмы  
 - Такси  
 [Актёры из фильма](articles/movies/taxi_1-2-3/actors.md)  
