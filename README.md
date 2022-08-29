@@ -9,9 +9,10 @@
 [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
 
 #### Программирование
-- Python
-  - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium/article.md)  
-
+- **Python**
+  - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium/article.md)
+- **C# Unity**
+  - [:video_game: Физика](articles/coding/c#unity/physics/article.md)
 #### Blender
 - **Моделирование**
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode/article.md)
@@ -28,8 +29,6 @@
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction/article.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves/article.md)
 
-#### Unity
-- [:video_game: Физика](articles/unity/physics/article.md)
 
 #### Фильмы  
 - Такси  
