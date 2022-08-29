@@ -9,15 +9,8 @@
 [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
 
 #### Программирование
-- Python Парсинг  
-  - [:heavy_check_mark: Введение в Selenium](articles/coding/python/selenium/introduction/article.md)  
-  - [:heavy_check_mark: Типы сайтов и способы поиска элементов + парсим карты Minecraft](articles/coding/python/selenium/search_elements_and_site_types/article.md)  
-  - [:heavy_check_mark: Работа с cookies](articles/coding/python/selenium/cookies/article.md)
-  - [:heavy_check_mark: Полезные настройки. Работа вебдрайвера](articles/coding/python/selenium/settings/article.md)
-  - [:heavy_check_mark: Имитация пользователя](articles/coding/python/selenium/user_imitation/article.md)
-  - [:heavy_check_mark: Приемы работы в Selenium](articles/coding/python/selenium/examples_code/article.md)
-  - [:heavy_check_mark: Парсинг и настройки Chromedriver](articles/coding/python/selenium/chrome_parsing/article.md)
-  - [:heavy_check_mark: Правила безопасного парсинга](articles/coding/python/selenium/undanger_parsing/article.md)
+- Python
+  - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium/article.md)  
 
 #### Blender
 - **Моделирование**
