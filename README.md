@@ -12,6 +12,7 @@
 - **Python**
   - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium/article.md)
 - **C# Unity**
+  - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base/article.md)
   - [:video_game: Физика](articles/coding/csharp_unity/physics/article.md)
 #### Blender
 - **Моделирование**
