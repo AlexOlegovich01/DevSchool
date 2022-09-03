@@ -87,3 +87,104 @@ void OnTriggerEnter2D(Collider2D other)
 ```
 
 ### Коррутины
+
+Коррутина - скрипт, который обеспечивает задержку во времени.
+
+```csharp
+float sp = 0.2f;
+void Start()
+{
+    transform.position = new Vector2(-10, 10);
+}
+
+void Update()
+{
+    transform.Translate(new Vector2(sp*Time.deltaTime,0));
+    if (transform.position.x>-6)
+    {
+        StartCoroutine(Speed()); /*Запуск коррутины*/
+    }
+}
+IEnumerator Speed() /*Коррутина*/
+{
+    sp = 2; /*Во время срабатывания*/
+    yield return new WaitForSeconds(1); /*Продолжительность работы*/
+    sp = 0.2f; /*По истечении времени*/
+}
+```
+
+### Raycast
+
+Речь пойдет о луче, который используется как прицел в играх и для других похожих вещей.
+
+#### Имитация прицеливания
+
+1. Создадим 3д проект, в нем создадим объект, который будет типа нашей целью.
+2. Создать скрипт и повесить на камеру.
+
+```csharp
+public float rayDistance; /*Длина луча*/
+void Update()
+{
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); /*Получаем лучь объекта из позиции мыши*/
+    Debug.DrawRay(transform.position, ray.direction * rayDistance); /*Выполняет рисование луча*/
+    //transform.position - положение камеры
+    //ray.direction - направление луча
+    if (Input.GetMouseButtonDown(0)) /*Если нажата ЛКМ*/
+    {
+        if (Physics.Raycast(ray)) /*Если луч попадает в цель*/
+        {
+            Debug.Log("Вы попали в цель!");
+        }
+    }
+}
+```
+
+3. При запуске игры, если щелкнуть ЛКМ по цели, в консоли появится сообщение. Если не выключать режим игры и перейти в вкладку сцены, то луч мы не видим. Чтобы его увидеть, нужно установить значение для публичной переменной rayDistance.
+4. Есть проблема. Наш код реагирует на то, куда указывает луч, но, если длина луча не достигает цели, все равно выводится сообщение в консоль. Давайте сделаем так, чтобы сообщение выводилось только в том случае, когда длина луча достаточна, чтобы достигнуть цели.
+
+```csharp
+if (Physics.Raycast(ray,rayDistance))
+```
+
+5. Теперь поговорим об определении, в какой именно объект мы стреляем. Этого можно достигнуть при использовании переменной типа RaycastHit.
+
+```csharp
+RaycastHit hit;
+if (Input.GetMouseButtonDown(0)) /*Если нажата ЛКМ*/
+{
+    if (Physics.Raycast(ray,out hit)) /*Если луч попадает в цель*/
+    {
+        Debug.Log("Вы попали в цель!"+hit.transform.position);
+    }
+}
+```
+
+В данном случае выведутся координаты того объекта, куда стреляли, но можно вывести и другие результаты, например имя.
+
+```csharp
+Debug.Log("Вы попали в цель!"+hit.collider.gameObject.name);
+```
+
+Или даже менять параметры
+
+```csharp
+if (Physics.Raycast(ray,out hit)) /*Если луч попадает в цель*/
+{
+    hit.collider.gameObject.name = "R.I.P";
+}
+```
+
+6. Так же можно получать данные нескольких объектов, собрав их в массиве, если луч пересекает несколько объектов.
+
+```csharp
+RaycastHit[] hits;
+if (Input.GetMouseButtonDown(0)) /*Если нажата ЛКМ*/
+{
+    hits = Physics.RaycastAll(ray);
+    foreach (RaycastHit hit in hits)
+    {
+        Debug.Log(hit.transform.position);
+    }
+}
+```
