@@ -188,3 +188,65 @@ if (Input.GetMouseButtonDown(0)) /*Если нажата ЛКМ*/
     }
 }
 ```
+
+### Управление персонажем
+
+Создадим простой скрипт, с помощью которого можно перемещать персонажа влево и вправо.
+
+```csharp
+float speed = 1; /*Переменная для скорости*/
+float speedMode; /*Направление персонажа*/
+
+void FixedUpdate()
+{
+    if (Input.GetKey(KeyCode.D)) /*Если нажата D*/
+    {
+        speedMode = speed; /*Направление вправо*/
+    }
+    else if (Input.GetKey(KeyCode.A)) /*Если нажата A*/
+    {
+        speedMode = -speed; /*Направление влево*/
+    }
+    transform.Translate(new Vector2(speedMode, 0)*Time.deltaTime); /*Как раз перемещение персонажа*/
+    speedMode = 0; Сброс скорости на 0, когда ничего не нажато
+
+}
+```
+
+Теперь нужно сделать так, чтобы игрок смотрел в том направлении, в котором идет движение. Под объявленными переменными скорости, объявим еще 2, которые отвечают за Scale.
+
+```csharp
+float beginScale; /*Начальный размер игрока*/
+float scale; /*Размер игрока*/
+```
+
+Суть в том, что,когда меняем размер на то же значение, но со знаком минус, объект инвертируется, то есть в нашем случае смотрит в другую сторону. Теперь надо в методе Start получить оригинальный размер игрока и записать его в переменную.
+
+```csharp
+void Start()
+    {
+        beginScale = transform.lossyScale.x;
+    }
+```
+
+Теперь FixedUpdate немного преобразовался.
+
+```csharp
+void FixedUpdate()
+{
+    if (Input.GetKey(KeyCode.D))
+    {
+        speedMode = speed;
+        scale = beginScale; /*Обычный размер*/
+    }
+    else if (Input.GetKey(KeyCode.A))
+    {
+        speedMode = -speed;
+        scale = -beginScale; /*Инверсированный размер*/
+    }
+    transform.localScale = new Vector2(scale, transform.lossyScale.y); /*Как раз изменение размера*/
+    transform.Translate(new Vector2(speedMode, 0)*Time.deltaTime);
+    scale = beginScale; /*В любом случае переходит в начальный размер*/
+    speedMode = 0;
+}
+```
