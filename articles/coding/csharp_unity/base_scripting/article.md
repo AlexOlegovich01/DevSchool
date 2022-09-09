@@ -250,3 +250,21 @@ void FixedUpdate()
     speedMode = 0;
 }
 ```
+
+### Прыжки
+
+Для удобства создадим новый скрипт. Объявим вне методов 2 переменные.
+
+```csharp
+float jump; /*Величина прыжка*/
+Rigidbody rb; /*Переменная компонента RigidBody*/
+```
+
+Получим компонент Rigidbody.
+
+```csharp
+void Start()
+{
+    rb = GetComponent<Rigidbody2D>();
+}
+```
