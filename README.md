@@ -17,16 +17,16 @@
   - [:video_game: Физика](articles/coding/csharp_unity/physics/article.md)
 #### Blender
 - **Моделирование**
-  - [:doughnut: Режим редактирования](articles/blender/modelling/editmode/article.md)
-  - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode/article.md)
-  - [:doughnut: Материалы](articles/blender/modelling/materials/article.md)
-  - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking/article.md)
+  - [:doughnut: Режим редактирования](articles/blender/modelling/editmode.md)
+  - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode.md)
+  - [:doughnut: Материалы](articles/blender/modelling/materials.md)
+  - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking.md)
   - :doughnut: Анимация
-  - :doughnut: Compositing
+  - [:doughnut: Compositing](articles/blender/modelling/compositing.md)
   - :doughnut: Модификаторы
-  - [:doughnut: Приемы работы](articles/blender/modelling/make_examples/article.md)
-  - [:doughnut: Рендеринг](articles/blender/modelling/rendering/article.md)
-  - [:doughnut: Физика](articles/blender/modelling/physics/article.md)
+  - [:doughnut: Приемы работы](articles/blender/modelling/make_examples.md)
+  - [:doughnut: Рендеринг](articles/blender/modelling/rendering.md)
+  - [:doughnut: Физика](articles/blender/modelling/physics.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction/article.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves/article.md)
