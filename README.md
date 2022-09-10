@@ -12,9 +12,9 @@
 - **Python**
   - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium/article.md)
 - **C# Unity**
-  - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base/article.md)
-  - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting/article.md)
-  - [:video_game: Физика](articles/coding/csharp_unity/physics/article.md)
+  - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
+  - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
+  - [:video_game: Физика](articles/coding/csharp_unity/physics.md)
 #### Blender
 - **Моделирование**
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode.md)
