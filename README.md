@@ -23,7 +23,7 @@
   - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode.md)
   - [:doughnut: Материалы](articles/blender/modelling/materials.md)
   - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking.md)
-  - :doughnut: Анимация
+  - [:doughnut: Анимация](articles/blender/modelling/animation.md)
   - [:doughnut: Compositing](articles/blender/modelling/compositing.md)
   - :doughnut: Модификаторы
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples.md)
