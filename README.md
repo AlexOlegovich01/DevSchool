@@ -29,6 +29,7 @@
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples.md)
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering.md)
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
+  - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
