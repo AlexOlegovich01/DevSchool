@@ -13,7 +13,8 @@
   - [:e-mail: HTML и CSS](articles/coding/frontend/html_css.md)
   - [:e-mail: Emmet](articles/coding/frontend/emmet.md)
 - **Python**
-  - [:heavy_check_mark: Парсинг в Selenium](articles/coding/python/selenium.md)
+  - [Парсинг в Selenium](articles/coding/python/selenium.md)
+  - [Регулярные выражения](articles/coding/python/regex.md)
 - **C# Unity**
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
   - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
