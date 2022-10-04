@@ -35,6 +35,7 @@
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
+  - [:earth_asia: Рандомное распределение примитивов](articles/blender/geometry_nodes/random_distribute_primitives.md)
 
 
 #### Фильмы  
