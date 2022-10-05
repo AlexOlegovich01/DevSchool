@@ -4,9 +4,10 @@
 ### Содержание  
 
 #### Программы  
-- VS Code  
-[Горячие клавиши](articles/software/vs_code/hotkeys.md)  
-[Полное удаление VS Code](articles/software/vs_code/delvscode.md)
+- **VS Code**
+  - [Горячие клавиши](articles/software/vs_code/hotkeys.md)
+  - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
+- [**Avidemux**](#)
 
 #### Программирование
 - **Frontend**
