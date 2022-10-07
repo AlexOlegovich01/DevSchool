@@ -16,6 +16,7 @@
 - **Python**
   - [Парсинг в Selenium](articles/coding/python/selenium.md)
   - [Регулярные выражения](articles/coding/python/regex.md)
+  - [ООП](articles/coding/python/oop.md)
 - **C# Unity**
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
   - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
