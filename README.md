@@ -22,7 +22,7 @@
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
   - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
   - [:video_game: Физика](articles/coding/csharp_unity/physics.md)
-- [**C# Unity**](articles/coding/git.md)
+- [**Git**](articles/coding/git.md)
 #### Blender
 - **Моделирование**
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode.md)
