@@ -14,6 +14,7 @@
   - [:e-mail: HTML и CSS](articles/coding/frontend/html_css.md)
   - [:e-mail: Emmet](articles/coding/frontend/emmet.md)
 - **Python**
+  - [Парсинг в requests и bs4](articles/coding/python/requests_and_bs4.md)
   - [Парсинг в Selenium](articles/coding/python/selenium.md)
   - [Регулярные выражения](articles/coding/python/regex.md)
   - [ООП](articles/coding/python/oop.md)
@@ -36,6 +37,7 @@
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering.md)
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
   - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
+  - [:doughnut: Запекание](articles/blender/modelling/baking.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
