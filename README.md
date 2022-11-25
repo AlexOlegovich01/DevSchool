@@ -24,6 +24,7 @@
   - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
   - [:video_game: Физика](articles/coding/csharp_unity/physics.md)
   - [:video_game: Звуки](articles/coding/csharp_unity/sounds.md)
+  - [:video_game: Система частиц](articles/coding/csharp_unity/particle.md)
 - [**Git**](articles/coding/git.md)
 #### Blender
 - **Моделирование**
