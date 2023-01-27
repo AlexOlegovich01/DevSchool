@@ -26,6 +26,7 @@
   - [:video_game: Звуки](articles/coding/csharp_unity/sounds.md)
   - [:video_game: Система частиц](articles/coding/csharp_unity/particle.md)
 - [**Git**](articles/coding/git.md)
+
 #### Blender
 - **Моделирование**
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode.md)
@@ -33,6 +34,8 @@
   - [:doughnut: Материалы](articles/blender/modelling/materials.md)
   - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking.md)
   - [:doughnut: Анимация](articles/blender/modelling/animation.md)
+    - [Ограничители](articles/blender/modelling/constraints.md)
+    - [Экшены](articles/blender/modelling/actions.md)
   - [:doughnut: Compositing](articles/blender/modelling/compositing.md)
   - :doughnut: Модификаторы
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples.md)
