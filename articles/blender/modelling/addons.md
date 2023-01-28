@@ -21,5 +21,5 @@
 
 С ним проще делат ретопологию на цилиндрических объектах.
 
-[img](http://docs.retopoflow.com/help_contours.png)
+![img](http://docs.retopoflow.com/help_contours.png)
 
