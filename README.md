@@ -37,7 +37,7 @@
     - [Ограничители](articles/blender/modelling/constraints.md)
     - [Экшены](articles/blender/modelling/actions.md)
   - [:doughnut: Compositing](articles/blender/modelling/compositing.md)
-  - :doughnut: Модификаторы
+  - [:doughnut: Аддоны](articles/blender/modelling/addons.md)
   - [:doughnut: Приемы работы](articles/blender/modelling/make_examples.md)
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering.md)
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
