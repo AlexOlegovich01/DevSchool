@@ -43,6 +43,7 @@
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
   - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
   - [:doughnut: Запекание](articles/blender/modelling/baking.md)
+  - [:doughnut: Новая система волос](articles/blender/modelling/new_hair_system.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
