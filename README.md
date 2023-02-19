@@ -42,6 +42,7 @@
   - [:doughnut: Рендеринг](articles/blender/modelling/rendering.md)
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
   - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
+  - [:doughnut: Видеомонтаж](articles/blender/modelling/video_editing.md)
   - [:doughnut: Запекание](articles/blender/modelling/baking.md)
   - [:doughnut: Новая система волос](articles/blender/modelling/new_hair_system.md)
 - **Geonetry Nodes**
