@@ -4,3 +4,6 @@
 2. Войти в настройки камеры и выбрать Type=Panoramic, Panorama Type=Equirectangular.
 3. Перейти в настройки рендера и выставить разрешение 4096x2048, File Format=OpenEXR, Color=RGB, Color Depth=Float(Half), Codec=DWAA.
 4. Отрендерить.
+
+**Внимание!!**  
+**Крайне нежелательно отрендеренный HDRI обрабатывать в Compositor и тес более вешать эффекты типа Glare!**
