@@ -31,7 +31,7 @@
 - **Моделирование**
   - [:doughnut: Режим редактирования](articles/blender/modelling/editmode.md)
   - [:doughnut: Скульптинг](articles/blender/modelling/sculptmode.md)
-  - [:doughnut: Материалы](articles/blender/modelling/materials.md)
+  - [:doughnut: Материалы и UV развертка](articles/blender/modelling/materials.md)
   - [:doughnut: Работа с кривыми](articles/blender/modelling/curve_vorking.md)
   - [:doughnut: Анимация](articles/blender/modelling/animation.md)
     - [Ограничители](articles/blender/modelling/constraints.md)
@@ -43,18 +43,18 @@
   - [:doughnut: Физика](articles/blender/modelling/physics.md)
   - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
   - [:doughnut: Видеомонтаж](articles/blender/modelling/video_editing.md)
-  - [:doughnut: Запекание](articles/blender/modelling/baking.md)
   - [:doughnut: Новая система волос](articles/blender/modelling/new_hair_system.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
   - [:earth_asia: Рандомное распределение примитивов](articles/blender/geometry_nodes/random_distribute_primitives.md)
+- **Подготовка модели к игре**
+  - [Запекание](articles/blender/modelling/baking.md)
+  - Экспорт в Unity
+  - [Создание HDRI](articles/blender/modelling/hdri_making.md)
 
 
 #### Фильмы  
 - Такси  
 [Актёры из фильма](articles/movies/taxi_1-2-3/actors.md)  
 [Автомобиль из фильма](articles/movies/taxi_1-2-3/car.md)
-
-
-#### [Полезные ссылки](#)
