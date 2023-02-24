@@ -50,7 +50,7 @@
   - [:earth_asia: Рандомное распределение примитивов](articles/blender/geometry_nodes/random_distribute_primitives.md)
 - **Подготовка модели к игре**
   - [Запекание](articles/blender/modelling/baking.md)
-  - Экспорт в Unity
+  - [Экспорт и перенос в Unity](articles/blender/modelling/export_models_in_unity.md)
   - [Создание HDRI](articles/blender/modelling/hdri_making.md)
 
 
