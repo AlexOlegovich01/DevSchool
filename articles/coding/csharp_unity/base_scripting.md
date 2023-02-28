@@ -698,3 +698,34 @@ void Awake()
     DontDestroyOnLoad(this.gameObject);
 }
 ```
+
+## 3D проект
+
+### Простейший контроллер управления мыши
+
+Для реализации придется написать 2 скрипта - первый повесить на игрока, а второй на камеру. Камера должна быть дочерним объектом игрока. Скрипт, что на персонаже, будет отвечать за движение мышкой вправо/влево, а скрипт на камере будет отвечать за поворот вверх и вниз.
+
+
+```csharp
+// Для персонажа
+
+private float mouseY;
+public float Sens=100f;
+void Update()
+{
+    mouseY=Input.GetAxis("Mouse X")*Sens*Time.deltaTime;
+    transform.Rotate(new Vector3(0,mouseY,0));
+}
+```
+
+```csharp
+// Для камеры
+
+private float mouseX;
+public float Sens=100f;
+void Update()
+{
+    mouseX=Input.GetAxis("Mouse Y")*Sens*Time.deltaTime;
+    transform.Rotate(new Vector3(-mouseX,0,0));
+}
+```
