@@ -4,10 +4,8 @@
 ### Содержание  
 
 #### Программы  
-- **VS Code**
-  - [Горячие клавиши](articles/software/vs_code/hotkeys.md)
-  - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
-- [**Avidemux**](#)
+- [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
+- [Видеозапись](#) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
 
 #### Программирование
 - **Frontend**
@@ -54,7 +52,7 @@
   - [Создание HDRI](articles/blender/modelling/hdri_making.md)
 
 
-#### Фильмы  
+<!-- #### Фильмы  
 - Такси  
 [Актёры из фильма](articles/movies/taxi_1-2-3/actors.md)  
-[Автомобиль из фильма](articles/movies/taxi_1-2-3/car.md)
+[Автомобиль из фильма](articles/movies/taxi_1-2-3/car.md) -->
