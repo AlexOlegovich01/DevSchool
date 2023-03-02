@@ -5,7 +5,7 @@
 
 #### Программы  
 - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
-- [Видеозапись](#articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
+- [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
 
 #### Программирование
 - **Frontend**
