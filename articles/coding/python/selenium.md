@@ -32,12 +32,14 @@ pip install selenium
 ```python
 #Скелет программы
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time #Для имитации задержки
 options=webdriver.FirefoxOptions() #Создаем объект настроек
+# Тут идут опции
 driver=webdriver.Firefox(options=options) #Создаем объект вебдрайвера и подключаем опции
 try:
 	driver.get('url') #Попадаем на нужный сайт
-	tine.sleep(10) #Ждем 10 секунд
+	time.sleep(10) #Ждем 10 секунд
 except:
 	pass
 finally:
@@ -61,13 +63,13 @@ finally:
 ### Поиск элементов в Selenium
 
 ```python
-find_element_by_id #Поиск элемента по id
-find_element_by_name #Поиск элемента по имени
-find_element_by_xpath #Поиск элемента по xpath
-find_element_by_link_text #Поиск элемента по тексту ссылки
-find_element_by_tag_name #Поиск элемента по имени тега
-find_element_by_class_name #Поиск элемента по имени класса
-find_element_by_css_selector #Поиск элемента по css селектору
+find_element(By.ID, "id") #Поиск элемента по id
+find_element(By.NAME, "name") #Поиск элемента по имени
+find_element(By.XPATH,"path") #Поиск элемента по xpath
+find_element(By.LINK_TEXT, "linktext") #Поиск элемента по тексту ссылки
+find_element(By.TAG_NAME, "tag") #Поиск элемента по имени тега
+find_element(By.CLASS_NAME, "имя") #Поиск элемента по имени класса
+find_element(By.CSS_SELECTOR,"selectors") #Поиск элемента по css селектору
 ```
 
 ### Перейдем к практике
@@ -85,13 +87,14 @@ find_element_by_css_selector #Поиск элемента по css селект�
 
 ```python
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 options=webdriver.FirefoxOptions()
 driver=webdriver.Firefox(options=options)
 try:
 	driver.get("https://ru.wikipedia.org/wiki/Синтаксический_анализ") #Заходим на сайт
 	time.sleep(2)
-	head=driver.find_element_by_tag_name("h1") #Находим заголовок и помещаем его в переменную
+	head=driver.find_element(By.TAG_NAME, "h1") #Находим заголовок и помещаем его в переменную
 	print(head.text) #Выводим текст
 except:
 	pass
@@ -105,13 +108,13 @@ finally:
 Но что, если нам нужно получить не один элемент, а сразу несколько?
 
 ```python
-find_elements_by_id #Поиск элементов по id
-find_elements_by_name #Поиск элементов по имени
-find_elements_by_xpath #Поиск элементов по xpath
-find_elements_by_link_text #Поиск элементов по тексту ссылки
-find_elements_by_tag_name #Поиск элементов по имени тега
-find_elements_by_class_name #Поиск элементов по имени класса
-find_elements_by_css_selector #Поиск элементов по css селектору
+find_elements(By.ID, "id") #Поиск элементов по id
+find_elements(By.NAME, "name") #Поиск элементов по имени
+find_elements(By.XPATH,"path") #Поиск элементов по xpath
+find_elements(By.LINK_TEXT, "linktext") #Поиск элементов по тексту ссылки
+find_elements(By.TAG_NAME, "tag") #Поиск элементов по имени тега
+find_elements(By.CLASS_NAME, "имя") #Поиск элементов по имени класса
+find_elements(By.CSS_SELECTOR,"selectors") #Поиск элементов по css селектору
 ```
 Обратите внимание на то, что мы уже получаем не один элемент, а список элементов. Поэтому и обращаться с ним нужно соответственно.  
 
@@ -124,7 +127,7 @@ find_elements_by_css_selector #Поиск элементов по css селек
 try:
 	driver.get("https://minecraft-inside.ru/maps/1.18.2/")
 	time.sleep(2)
-	modName=driver.find_elements_by_tag_name("h2")
+	modName=driver.find_elements(By.TAG_NAME, "h2")
 	for name in modName: #Проходимся в цикле по всем элементам
 		print(name.text)
 ```
@@ -146,6 +149,7 @@ https://minecraft-inside.ru/maps/1.18.2/page/2/
 #Код полностью
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 options=webdriver.FirefoxOptions()
 driver=webdriver.Firefox(options=options)
@@ -155,7 +159,7 @@ try:
 		num=_num+1 #Это, чтобы счет начинался не с 0, а с 1
 		driver.get("https://minecraft-inside.ru/maps/1.18.2/page/{}/".format(num))
 		time.sleep(2)
-		mapName=driver.find_elements_by_tag_name("h2") #Ищем элемент с заголовками
+		modName=driver.find_elements(By.TAG_NAME, "h2") #Ищем элемент с заголовками
 		for name in mapName: #Проходимся по всем заголовкам в цикле
 			print("{} - {}".format(mapNumber,name.text))
 			mapNumber+=1 #Увеличиваем номер на 1
@@ -248,6 +252,7 @@ javascript.enabled=False #отключает js
 
 ```python
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 options=webdriver.FirefoxOptions()
 #...опции...
