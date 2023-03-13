@@ -43,6 +43,7 @@
   - [:doughnut: Ассеты](articles/blender/modelling/assets.md)
   - [:doughnut: Видеомонтаж](articles/blender/modelling/video_editing.md)
   - [:doughnut: Новая система волос](articles/blender/modelling/new_hair_system.md)
+  - [:doughnut: **Нейросети**](articles/blender/modelling/neural_networks.md)
 - **Geonetry Nodes**
   - [:earth_asia: Введение](articles/blender/geometry_nodes/introduction.md)
   - [:earth_asia: Работа с кривыми](articles/blender/geometry_nodes/curves.md)
