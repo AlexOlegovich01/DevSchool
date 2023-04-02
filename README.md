@@ -52,6 +52,7 @@
   - [Запекание](articles/blender/modelling/baking.md)
   - [Экспорт и перенос в Unity](articles/blender/modelling/export_models_in_unity.md)
   - [Создание HDRI](articles/blender/modelling/hdri_making.md)
+  - [Текстурирование в Substance Painter](articles/blender/texturing/substance_painter_beginning.md)
 
 
 <!-- #### Фильмы  
