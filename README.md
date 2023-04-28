@@ -18,6 +18,7 @@
   - [ООП](articles/coding/python/oop.md)
   - [Pandas](articles/coding/python/pandas.md)
   - [PyAutoGUI](articles/coding/python/pyautogui.md)
+  - [JSON](articles/coding/python/json.md)
   - [Виртуальное окружение](articles/coding/python/virtualenv.md)
 - **C# Unity**
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
