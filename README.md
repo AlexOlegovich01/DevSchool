@@ -56,6 +56,14 @@
   - [Создание HDRI](articles/blender/modelling/hdri_making.md)
   - [Текстурирование в Substance Painter](articles/blender/texturing/substance_painter_beginning.md)
 
+#### Нейросети
+
+- [Stable Diffusion в Google Collab](articles/neuronetworks/stable-diffusion-in-google-collab.md)
+
+
+
+
+
 
 <!-- #### Фильмы  
 - Такси  
