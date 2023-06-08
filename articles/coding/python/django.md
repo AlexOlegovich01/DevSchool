@@ -2,6 +2,35 @@
 
 Этот материал посвящен фреймворку Django для создания веб приложений.
 
+## Содержание
+
+- Начало работы
+- Архитектура проекта
+  - settings.py
+  - urls.py
+- Создание приложений
+- Работа с веб страницами
+- Динамический контент
+  - Циклы и работа с словарями
+  - Меняем гиперссылки
+  - Наследование шаблонов
+- Работа с базами данных
+  - Основные параметры
+  - Миграции
+  - Работа с полями базы данных
+    - Работа с базой данных из админ-панели
+  - Работа с медиафайлами
+- Пространство имен
+- Фикстуры
+- Регистрация и авторизация
+  - Формы
+  - Кастомные формы
+    - Кастомизация кнопки входа
+  - Регистрация
+  - Страница профиля
+  - Обработка ошибок
+  - LogOut
+
 ## Начало работы
 
 Установка
@@ -851,7 +880,95 @@ admin.site.register(User)
 
 ### Формы
 
-В приложении users нужно создать папку templates, где будут храниться html шаблоны для авторизации и регистрации. Далее в ней создать папку users. В ней создадим файлы login.html и register.html. Далее как обычно открываем файл с контроллерами.
+В приложении users нужно создать папку templates, где будут храниться html шаблоны для авторизации и регистрации. Далее в ней создать папку users. В ней создадим файлы login.html и register.html. Внесем изменения в index.html.
+
+```html
+<div class="userblock">
+	<a href="{%url 'users:register'%}"><div class="auth">Sign Up</div></a>
+	<a href="{%url 'users:login'%}"><div class="auth">Log In</div></a>
+	<a href="http://127.0.0.1:8000/admin"><div class="auth">Admin</div></a>
+	<div class="clearfix"></div>
+</div>
+```
+
+login.html
+
+```html
+<body>
+    <div class="cont">
+        <div class="hdr">Вход</div>
+        <div class="block-form">
+            <form action="{%url 'users:login'%}" method='POST'>
+            	<div class="bf-segment"><label for="">Ник</label></div><div class="bf-segment"><input type="text" class="bf-segment-login"></div>
+            	<div class="bf-segment"><label for="">Пароль</label></div><div class="bf-segment"><input type="text" class="bf-segment-password"></div>
+            	<div class="clearfix"></div>
+                <input class="bf-segment-submit" type="submit" value="Войти">
+            </form>
+        </div>
+    </div>
+</body>
+```
+
+register.html
+
+```html
+<body>
+    <div class="cont">
+        <div class="hdr">Регистрация</div>
+        <div class="block-form">
+            <form action="">
+            	<div class="bf-segment"><label for="">Ник</label></div><div class="bf-segment"><input class="rg-uname" type="text"></div>
+            	<div class="bf-segment"><label for="">Пароль</label></div><div class="bf-segment"><input class="rg-pass" type="text"></div>
+                <div class="bf-segment"><label for="">Подтвердить пароль</label></div><div class="bf-segment"><input class="rg-pass" type="text"></div>
+            	<div class="clearfix"></div>
+                <button>Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</body>
+```
+
+```css
+button{
+	font-size:40px;
+	background:#373B42;color:#AAB6CD;border:2px #AAB6CD solid;
+	margin-top:10px;padding:5px;
+}
+```
+
+styles.css
+
+```css
+.hdr{color:white;font-size:40px;text-align:center;}
+.block-form{
+	max-width:700px;
+	min-height:200px;
+	border:5px #AAB6CD solid;
+	background:#555B66;
+	margin:auto;
+	margin-top:100px;
+	padding-top:20px;
+}
+.bf-segment{
+	width:50%;
+	float:left;
+	text-align:left;
+	color:#AAB6CD;
+	font-size:30px;
+	background:#555B66;
+	margin-top:8px;
+}
+.bf-segment input{
+	font-size:30px;
+	background:#555B66;
+	width:80%;
+	border:2px #AAB6CD solid;
+}
+.bf-segment input:focus{background:#373B42;}
+.butsend{font-size:30px;color:white;}
+```
+
+Далее как обычно открываем файл с контроллерами.
 
 ```python
 from django.shortcuts import render
@@ -879,9 +996,439 @@ urlpatterns = [
 path('users',include('users.urls',namespace='users')),
 ```
 
+Изменить файл products/models.py, вписав туда метакласс. Он должен располагаться выше методов.
+
+```python
+class Meta:
+	verbose_name_plural='Perses'
+```
+
+В приложении создать файл forms.py. Этот файл будет содержать формы, которые будут отображаться на страницах. Вставить код, который приведен ниже. Здесь используется метакласс, в который переданы переменные. model - это та модель, с которой будет вестись работа. В данном случае модель User, в которой содержится модель User. fields - это поля, которые будут в форме.
+
+```python
+from django.contrib.auth.forms import AuthenticationForm
+from users.models import User
+class UserLoginForm(AuthenticationForm):
+	class Meta:
+		model=User
+		fields=('username','password')
+```
+
+Импортировать нужные модули в views.py. Пока что, в примере, идет работа с авторизацией. Кроме импорта джанговских модулей, была импортирована форма, которая была ранее создана в файле с формами. В методе login был создан экземпляр класса этой формы и передан в словарь context.
+
+```python
+from django.shortcuts import render,httpResponseRedirect
+from django.urls import reverse
+from users.forms import UserLoginForm
+def login(request):
+	form=UserLoginForm()
+	context={'form':form}
+    return render(request,'users/login.html',context)
+```
+
+Теперь нужно перейти в login.html и закомментировать все содержимое тега формы, но не сам тег и блок butsend. Вот блок кода без комментариев. Обратите внимание на метод as_p - он отвечает за отображение элемента как блок.
+
+```html
+<form action="">
+    {{form.as_p}}
+    <input class="bf-segment-submit" type="submit" value="Войти">
+</form>
+```
+
+В файле views.py нужно прописать всю логику авторизации.
+
+```python
+from django.shortcuts import render,HttpResponseRedirect
+from django.urls import reverse
+from users.forms import UserLoginForm
+from django.contrib import auth
+def login(request):
+	if request.method=='POST': # Если был POST запрос
+		form=UserLoginForm(data=request.POST) # Создание экземпляра класса формы для POST апроса
+		if form.is_valid(): # Если данные корректны
+			username=request.POST['username'] # Логин
+			password=request.POST['password'] # Пароль
+			user=auth.authenticate(username=username,password=password) # Передача логина и пароля и аутентификация
+			if user and user.is_active: # Если пользователь есть и он активен
+				auth.login(request,user) # Авторизация
+				return HttpResponseRedirect(reverse('index')) # Перенаправление пользователя
+	else:
+		form=UserLoginForm() # Просто отображение формы
+	context={'form':form}
+	return render(request,'users/login.html',context)
+```
+
+Открыть login.html и вписать в тег form следующее. csrf токен нужен для шифрования данных. Мера безопасности.
+
+```html
+<form action="{%url 'users:login'%}" method='POST'>
+    {%csrf_token%}
+    {{form.as_p}}
+    <input class="bf-segment-submit" type="submit" value="Войти">
+</form>
+```
+Сейчас, если ввести имя суперпользователя и пароль и нажать на кнопку авторизации, будет перенаправление на главную страницу.
+
+### Кастомные формы
+
+А сейчас поработаем над полями, которые ранее были созданы и стилизованы. Нужно перейти в forms.py и импортировать туда джанговский метод форм. Сначала создается переменная, которая ссылается на определенные аттрибуты html кода, в данный момент назовем переменную username. Здесь обращаемся к методу CharField, то есть к строчному полю и передаем параметр widget, в который как раз и передаются аттрибуты html страницы в методе TextInput. Атрибуты передаются в формате словаря, в котором ключ - атрибут, а значение - значение атрибута.  
+Далее создадим переменную ддя пароля, в данном случае назовем ее password. Все примерно так же, но уже тип PasswordInput.  
+Обратите внимание, что эти переменные будут относиться к инпутам в html коде, но не к лейблам и другим элементам. Так же стоит обратить внимание на то, что в словаре не нужно передавать тип - он был уже задан как PasswordInput или TextInput.  
 
 
+forms.py
 
+```python
+from django.contrib.auth.forms import AuthenticationForm
+from users.models import User
+from django import forms
+class UserLoginForm(AuthenticationForm):
+	username=forms.CharField(widget=forms.TextInput(attrs={'class':'bf-segment-login'}))
+	password=forms.CharField(widget=forms.PasswordInput(attrs={'class':'bf-segment-password'}))
+	class Meta:
+		model=User
+		fields=('username','password')
+```
 
+Открыть шаблон и внести туда следующие изменения - заменить инпуты на ранее созданные.  
+Но все же нужно поработать с лейблами - там есть аттрибут for, который как бы привязывает лейбл к нужному полю, поэтому в этом атрибуте нужно обратиться к ранее созданным полям и добавить специальный метод id_for_label.
 
+```html
+<form action="{%url 'users:login'%}" method='POST'>
+    {%csrf_token%}
+	<div class="bf-segment"><label for="{{form.username.id_for_label}}">Ник</label></div><div class="bf-segment">{{form.username}}</div>
+	<div class="bf-segment"><label for="{{form.password.id_for_label}}">Пароль</label></div><div class="bf-segment">{{form.password}}</div>
+	<div class="clearfix"></div>
+    <input class="bf-segment-submit" type="submit" value="Войти">
+</form>
+```
 
+Часто бывает так, что какой-нибудь атрибут, например class, повторяется много раз и немного неудобно каждый раз в новых полях передавать его и его значение. Но можно сделать это параметром по умолчанию, создав метод инициализации в классе UserLoginForm.
+
+```python
+def __init__(self,*args,**kwargs):
+	super(UserLoginForm,self).__init__(*args,**kwargs)
+	for field_name,field in self.fields.items():
+		field.widget.attrs['class']='название класса'
+```
+
+#### Кастомизация кнопки входа
+
+Экспериментируя с кодом, я понял, что вполне можно использовать не инпуты с типом отправки, а кнопками. Это необязательный момент, который можно пропустить, но если вы все же решили последовать дальнейшим действиям, то замените кнопку инпут на тег button и пропишите для негр стили.
+
+```html
+<button>Войти</button>
+```
+
+```css
+button{
+	font-size:40px;
+	background:#373B42;color:#AAB6CD;border:2px #AAB6CD solid;
+	margin-top:10px;padding:5px;
+}
+```
+
+### Регистрация
+
+В forms.py импортировать класс создания форм регистрации.
+
+```python
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+```
+
+Создать класс UserRegistrationForm, который наследуется от UserCreationForm. Как и с логином, нужно создать класс Meta, куда передать модель, с которой нужно работать и поля. Обратите внимание, что поля username, password1 и password2 - обязательные и должны иметь именно такие имена!
+
+```python
+class UserRegistrationForm(UserCreationForm):
+	username=forms.CharField(widget=forms.TextInput(attrs={'class':'rg-uname'}))
+	password1=forms.CharField(widget=forms.PasswordInput(attrs={'class':'rg-pass1'}))
+	password2=forms.CharField(widget=forms.PasswordInput(attrs={'class':'rg-pass2'}))
+	class Meta:
+		model=User
+		fields=('username','password1','password2')
+```
+
+Перейти в views.py. Здесь обратите внимание на условие, что делать, если данные не валидны. В этом случае принтуется ошибка, которую можно увидеть в консоли. Это не обязательно, но весьма удобно.
+
+```python
+from users.forms import UserLoginForm,UserRegistrationForm
+...
+def register(request):
+	if request.method=='POST':
+		form=UserRegistrationForm(data=request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect(reverse('users:login'))
+		else:
+			print(form.errors)
+	else:
+		form=UserRegistrationForm()
+	context={'form':form}
+	return render(request,'users/register.html',context)
+```
+
+Перейти в register.html и похожим образом, как и с авторизацией, изменить код.
+
+```html
+<body>
+    <div class="cont">
+        <div class="hdr">Регистрация</div>
+        <div class="block-form">
+            <form action="{%url 'users:register'%}" method="POST">
+                {%csrf_token%}
+            	<div class="bf-segment"><label for="{{form.username.id_for_label}}">Ник</label></div><div class="bf-segment">{{form.username}}</div>
+            	<div class="bf-segment"><label for="{{form.password1.id_for_label}}">Пароль</label></div><div class="bf-segment">{{form.password1}}</div>
+                <div class="bf-segment"><label for="{{form.password2.id_for_label}}">Подтвердить пароль</label></div><div class="bf-segment">{{form.password2}}</div>
+            	<div class="clearfix"></div>
+                <button>Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</body>
+```
+
+Можно регистрироваться и авторизоваться. В админке, в приложении Users, можно видеть всех зарегистрированных пользователей. Пароль не должен быть коротким!
+
+### Страница профиля
+
+Создадим страницу профиля profile.html
+
+```html
+<body>
+    <div class="cont">
+        <div class="hdr">Изменить данные</div>
+        <div class="block-form">
+            <form action="">
+                <div class="bf-segment"><label for="">Ник</label></div><div class="bf-segment"><input type="text" class="bf-segment-login"></div>
+                <div class="bf-segment"><label for="">Пароль</label></div><div class="bf-segment"><input type="text" class="bf-segment-password"></div>
+                <div class="clearfix"></div>
+                <button>Сохранить</button>
+            </form>
+        </div>
+    </div>
+</body>
+```
+
+Перед работой с профилем внесем некоторые изменения в шаблоны.
+
+index.html
+
+```html
+<div class="userblock">
+	<a href="{%url 'users:register'%}"><div class="auth">Sign Up</div></a>
+	<a href="{%url 'users:login'%}"><div class="auth">Log In</div></a>
+    <a href="{%url 'users:profile'%}"><div class="auth">Profile</div></a>
+	<a href="http://127.0.0.1:8000/admin"><div class="auth">Admin</div></a>
+	<div class="clearfix"></div>
+</div>
+```
+
+game.html
+
+```html
+<link rel="stylesheet" href="{%static 'styles/game-styles.css'%}">
+<link rel="stylesheet" href="{%static 'styles/styles.css'%}">
+...
+<body>
+	<div class="userblock">
+		<a href="{%url 'users:register'%}"><div class="auth">Sign Up</div></a>
+		<a href="{%url 'users:login'%}"><div class="auth">Log In</div></a>
+    	<a href="{%url 'users:profile'%}"><div class="auth">Profile</div></a>
+		<a href="http://127.0.0.1:8000/admin"><div class="auth">Admin</div></a>
+		<div class="clearfix"></div>
+	</div>
+	<div class="sitehead"><h1>Список игроков</h1></div>
+	<div class="content">
+		{%for pers in perses%}
+			<div class="pers">
+				<div class="pers-img"><img src="media/{{pers.image}}" alt="" height=100%></div>
+				<div class="pers-name"><b>{{pers.name}}</b></div>
+				<div class="pers-role">{{pers.role}}</div>
+				<div class="pers-lives">❤️ {{pers.lives}}</div>
+				<div class="pers-years">🧍 {{pers.age}}</div>
+			</div>
+		{%endfor%}
+		<div class="clearfix"></div>
+	</div>
+</body>
+```
+
+Можно убрать background для блока sitehead.
+
+Перейти в views.py и создать контроллер.
+
+```python
+def profile(request):
+	return render(request,'users/profile.html')
+```
+
+Перейти в urls.py и прописать в нем путь.
+
+```python
+from users.views import login,register,profile
+...
+path('profile',profile,name='profile')
+```
+
+Открыть forms.py и создать новую форму. Пока что будем менять username.
+
+```python
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm,UserChangeForm
+...
+class UserProfileForm(UserChangeForm):
+	username=forms.CharField(widget=forms.TextInput())
+	class Meta:
+		model=User
+		fields=('username',)
+```
+
+Открыть views.py. Здесь обратите внимание на параметр instance, который ссылается на пользователя, если он авторизован.
+
+```python
+from users.forms import UserLoginForm,UserRegistrationForm,UserProfileForm
+...
+def profile(request):
+	if request.method=='POST':
+		form=UserProfileForm(data=request.POST,instance=request.user)
+		if form.is_valid():
+			form.save()
+		return HttpResponseRedirect(reverse('users:profile'))
+	form=UserProfileForm(instance=request.user)
+	context={'form':form}
+	return render(request,'users/profile.html',context)
+```
+
+Далее перейти в profile.html и внести туда изменения.
+
+```html
+<body>
+    <div class="cont">
+        <div class="hdr">Изменить данные</div>
+        <div class="block-form">
+            <form action="{%url 'users:profile'%}" method="POST">
+                {%csrf_token%}
+                <div class="bf-segment"><label for="{{form.username.id_for_label}}">Ник</label></div><div class="bf-segment">{{form.username}}</div>
+                <div class="clearfix"></div>
+                <button>Сохранить</button>
+            </form>
+        </div>
+    </div>
+</body>
+```
+
+### Обработка ошибок
+
+Задача - выводить ошибки на панель ввода данных при регистрации и авторизации, а так же выводить их в удобном формате.
+
+Откроем register.html, а во всех остальных шаблонах по аналогии. Смысл в том, если есть ошибка, то выводится блок с классом errors-block.
+
+```html
+<button>Зарегистрироваться</button>
+{%if form.errors%}
+    <div class="errors-block">{{form.errors}}</div>
+{%endif%}
+```
+
+Для того, чтобы ошибки выводились на русском языке и был ваш часовой пояс, нужно открыть файл settings.py и внести изменения в переменные.
+
+```python
+LANGUAGE_CODE = 'ru-RU'
+TIME_ZONE = 'Europe/Moscow'
+```
+
+### LogOut
+
+Создать контроллер
+
+```python
+def logout(request):
+	auth.logout(request)
+	return HttpResponseRedirect(reverse('index'))
+```
+
+Перейти в urls.py.
+
+```python
+from users.views import login,register,profile,logout
+...
+path('logout',logout,name='logout'),
+```
+
+Немного изменим html шабдоны, добавив в шапку кнопку для выхода.
+
+```html
+<div class="userblock">
+    <a href="{%url 'users:logout'%}"><div class="auth">Log Out</div></a>
+	<a href="{%url 'users:register'%}"><div class="auth">Sign Up</div></a>
+	<a href="{%url 'users:login'%}"><div class="auth">Log In</div></a>
+    <a href="{%url 'users:profile'%}"><div class="auth">Profile</div></a>
+	<a href="http://127.0.0.1:8000/admin"><div class="auth">Admin</div></a>
+	<div class="clearfix"></div>
+</div>
+```
+
+На данный момент, если сначала авторизовать админа и потом нажать на кнопку Log Out, то при повторном переходе в админку запросит логин и пароль. Но нужно поработать с кнопками - если пользователь авторизован, у него должны быть кнопки редактирования профиля и выхода, а если пользователь не в учетке, то ему нужно показывать кнопки авторизации и регистрации. Нужно изменить шапку, добавив соответствующее условие.
+
+```html
+<div class="userblock">
+    {%if user.is_authenticated%}
+        <a href="{%url 'users:logout'%}"><div class="auth">Log Out</div></a>
+        <a href="{%url 'users:profile'%}"><div class="auth">Profile</div></a>
+    {%else%}
+		<a href="{%url 'users:register'%}"><div class="auth">Sign Up</div></a>
+		<a href="{%url 'users:login'%}"><div class="auth">Log In</div></a>
+    {%endif%}
+	<a href="http://127.0.0.1:8000/admin"><div class="auth">Admin</div></a>
+	<div class="clearfix"></div>
+</div>
+```
+
+## Расширенный Django ORM
+
+### Некоторые распространенные методы выборки
+
+Это не все методы, которые есть, но самые распространенные. Применяются они в filter.
+
+__in - фильтрует по определенному полю.  
+__пе - больше чем.  
+__startswith - начинается с.  
+order_by() - сортировка.  
+
+sum() - сумма.  
+total_quantity() - количество.  
+total_sum() - итоговая сумма.  
+count() - количество элементов в БД.  
+
+Перейдем к практике, допустим, нужна ячейка, у которой id будет равен 1.
+
+```
+Perses.objects.filter(id__in=[1])
+```
+
+Обратите внимание, что нужно передать список, ведь речь идет об объектах.
+
+Выберем всех персонажей, возраст которых больше 20 лет.
+
+```
+Perses.objects.filter(age__gt=20)
+```
+
+Выберем все имена, которые начинаются на A.
+
+```
+Perses.objects.filter(name__startswith='A')
+```
+
+По такому простому принципу можно создавать запросы. Общая форма запроса выглядит так
+
+```
+Таблица.objects.filter(поле__метод=значение)
+```
+
+Методы без подчеркивания вызываются в конце, после запроса.
+
+```
+Perses.objects.filter(name__startswith='A').count()
+```
+
+Для сортировки используется метод order_by(). Здесь в скобках пишется поле, по которому нужно сортировать. Если нужна сортировка в обратном порядке, то перед полем нужно поставить минус.
