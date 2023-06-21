@@ -1,9 +1,6 @@
 ﻿# Добро пожаловать!
 <p>Вы находитесь в репозитории, где собрана база знаний по некоторым областям IT. Данная база не претендует на полноту, скорее это коллекция заметок для того, чтобы нам, создателям этой базы, было проще освежить в памяти некоторые моменты, которые связаны с разработкой.</p>
 
-<a href="https://t.me/soul_radio"><img src="img/untitled.png" alt=""></a>
-
-
 ### Содержание  
 
 #### Программы 
@@ -64,6 +61,8 @@
 #### Нейросети
 
 - [Stable Diffusion в Google Collab](articles/neuronetworks/stable-diffusion-in-google-collab.md)
+
+<a href="https://t.me/soul_radio"><img src="img/untitled.png" alt=""></a>
 
 
 
