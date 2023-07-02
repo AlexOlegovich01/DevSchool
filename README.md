@@ -6,6 +6,7 @@
 #### Программы 
 - [VS Code](articles/software/vs_code/usevscode.md)
 - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
+- [Сниппеты в VS Code](articles/software/vs_code/vscode-snippets.md)
 - [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
 
 #### Программирование
