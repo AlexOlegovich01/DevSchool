@@ -229,3 +229,19 @@ import requests
 headers={'user-agent': 'агент'}
 r=requests.get("https://api.github.com/events",headers=headers)
 ```
+
+### Поиск по XPATH
+
+Таким образом можно искать элементы по XPATH.
+
+```python
+import requests
+from bs4 import BeautifulSoup
+from lxml import etree
+url=requests.get("сайт",headers=заголовок)
+sp=BeautifulSoup(url.content,'html.parser')
+dom=etree.HTML(str(sp)) # Получение древа страницы
+print(dom.xpath("//h1")[0].text)
+```
+
+Обратите внимание, что нужно явно указывать индекс элемента или перебирать в цикле, так как этот метод ищет список элементов.
