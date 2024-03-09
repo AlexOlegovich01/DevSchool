@@ -8,6 +8,7 @@
 - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
 - [Сниппеты в VS Code](articles/software/vs_code/vscode-snippets.md)
 - [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
+- [Улучшение звука из микрофона в OBS](articles/software/obsCleanVoice.md)
 
 #### Программирование
 - **Frontend**
