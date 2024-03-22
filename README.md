@@ -6,8 +6,6 @@
 
 #### Программы 
 - [VS Code](articles/software/vscode.md)
-- [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
-- [Сниппеты в VS Code](articles/software/vs_code/vscode-snippets.md)
 - [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
 - [Улучшение звука из микрофона в OBS](articles/software/obsCleanVoice.md)
 
@@ -23,6 +21,7 @@
   - [Pandas](articles/coding/python/pandas.md)
   - [PyAutoGUI](articles/coding/python/pyautogui.md)
   - [JSON](articles/coding/python/json.md)
+  - [Pillow](articles/coding/python/pillow.md)
   - [Виртуальное окружение](articles/coding/python/virtualenv.md)
 - **C# Unity**
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
@@ -31,6 +30,7 @@
   - [:video_game: Звуки](articles/coding/csharp_unity/sounds.md)
   - [:video_game: Система частиц](articles/coding/csharp_unity/particle.md)
 - [**Git**](articles/coding/git.md)
+- [**Docker**](articles/coding/docker.md)
 
 #### Blender
 - **Моделирование**
