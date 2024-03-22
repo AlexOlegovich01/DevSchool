@@ -1,10 +1,11 @@
 ﻿# Добро пожаловать!
+![img](img/logo.png)
 <p>Вы находитесь в репозитории, где собрана база знаний по некоторым областям IT. Данная база не претендует на полноту, скорее это коллекция заметок для того, чтобы нам, создателям этой базы, было проще освежить в памяти некоторые моменты, которые связаны с разработкой.</p>
 
 ### Содержание  
 
 #### Программы 
-- [VS Code](articles/software/vs_code/usevscode.md)
+- [VS Code](articles/software/vscode.md)
 - [Полное удаление VS Code](articles/software/vs_code/delvscode.md)
 - [Сниппеты в VS Code](articles/software/vs_code/vscode-snippets.md)
 - [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
