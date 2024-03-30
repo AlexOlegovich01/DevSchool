@@ -8,6 +8,7 @@
 - [VS Code](articles/software/vscode.md)
 - [Видеозапись](articles/software/videorecording.md) - здесь собрана информация о программах, преимущественно OBS и Avidemux, которые предназначены для записи и обработки видео.
 - [Улучшение звука из микрофона в OBS](articles/software/obsCleanVoice.md)
+- [Символьные ссылки в Windows](articles/software/simbLinkWin.md)
 
 #### Программирование
 - **Frontend**
