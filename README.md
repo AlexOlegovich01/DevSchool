@@ -30,6 +30,9 @@
   - [:video_game: Физика](articles/coding/csharp_unity/physics.md)
   - [:video_game: Звуки](articles/coding/csharp_unity/sounds.md)
   - [:video_game: Система частиц](articles/coding/csharp_unity/particle.md)
+- **Godot**
+  - [:video_game: Основы](articles/coding/godot/osnovy.md)
+  - [:video_game: Скриптинг](articles/coding/godot/scripting.md)
 - [**Git**](articles/coding/git.md)
 - [**Docker**](articles/coding/docker.md)
 
