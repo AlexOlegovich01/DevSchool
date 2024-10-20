@@ -69,8 +69,8 @@
 
 - [Stable Diffusion в Google Collab](articles/neuronetworks/stable-diffusion-in-google-collab.md)
 - [Stable Diffusion](articles/neuronetworks/stable-diffusion.md)
+- [Ollama](articles/neuronetworks/ollama.md)
 
-<!-- <a href="https://t.me/soul_radio"><img src="img/untitled.png" alt=""></a> -->
 
 
 
