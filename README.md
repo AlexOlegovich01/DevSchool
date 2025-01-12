@@ -10,6 +10,9 @@
 - [Улучшение звука из микрофона в OBS](articles/software/obsCleanVoice.md)
 - [Символьные ссылки в Windows](articles/software/simbLinkWin.md)
 
+#### Игры
+- [**Minecraft**. Mekanism](articles/articles/games/minecraftMekanism.md)
+
 #### Программирование
 - **Frontend**
   - [:e-mail: HTML и CSS](articles/coding/frontend/html_css.md)
