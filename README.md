@@ -11,7 +11,7 @@
 - [Символьные ссылки в Windows](articles/software/simbLinkWin.md)
 
 #### Игры
-- [**Minecraft**. Mekanism](articles/articles/games/minecraftMekanism.md)
+- [**Minecraft**. Mekanism](articles/games/minecraftMekanism.md)
 
 #### Программирование
 - **Frontend**
