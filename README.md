@@ -27,6 +27,7 @@
   - [JSON](articles/coding/python/json.md)
   - [Pillow](articles/coding/python/pillow.md)
   - [Виртуальное окружение](articles/coding/python/virtualenv.md)
+  - [Helium](articles/coding/python/helium.md)
 - **C# Unity**
   - [:video_game: Базовый C#](articles/coding/csharp_unity/csharp_base.md)
   - [:video_game: Базовый скриптинг](articles/coding/csharp_unity/base_scripting.md)
